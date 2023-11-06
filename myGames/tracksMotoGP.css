@@ -1,0 +1,21 @@
+.track-card{
+    background-color: green;
+}
+
+body{
+    background-color: red;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal{
+    position: relative;
+}
+
+.previous-results{
+    background-color: blue;
+    color: white;
+}
