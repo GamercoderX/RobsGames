@@ -28,7 +28,7 @@
                 <p>This is a simple HTML dialog box.</p>
                 <form onsubmit="return addToList()" action="" method="post">
                     <label><input type="date" placeholder="date" id="date"></label>
-                    <label><input type="text" placeholder="season" id="season"></label>
+                    <label><input type="text" placeholder="season" id="season" value="1"></label>
                     <label for="version-select">
                         <select id="version-select" name="version-select" aria-placeholder="MotoGP 22">
                         <option value="MotoGP 22">MotoGP 22</option>
@@ -37,12 +37,12 @@
                     </label>
                     <label><input type="text" id="track" value="Qatar"></label>
                     
-                    <label><input type="text" id="difficulty" placeholder="difficulty"></label>
-                    <label><input type="text" id="race-length" placeholder="race length"></label>
-                    <label><input type="text" id="place" placeholder="place"></label>
-                    <label><input type="text" id="fastest-lap" placeholder="fastest lap"></label>
-                    <label><input type="text" id="total-race-time" placeholder="total race time"></label>
-                    <label><input type="text" id="moto-class" placeholder="moto class"></label>
+                    <label><input type="text" id="difficulty" placeholder="difficulty" value="25%"></label>
+                    <label><input type="text" id="race-length" placeholder="race length" value="35%"></label>
+                    <label><input type="text" id="place" placeholder="place" value="30"></label>
+                    <label><input type="text" id="fastest-lap" placeholder="fastest lap" value="1:48.787"></label>
+                    <label><input type="text" id="total-race-time" placeholder="total race time" value="11:47.976"></label>
+                    <label><input type="text" id="moto-class" placeholder="moto class" value="Moto 3"></label>
                     <button type="submit">Submit data</button>
                 </form>
                 <button id="close-button" >Close</button>
@@ -53,10 +53,6 @@
                 <div class="kind three">Fastest Lap</div>
                 <div class="kind four">Total Race Time</div>
 
-                <div class="kind one">Season</div>
-                <div class="kind two">Finishing Position</div>
-                <div class="kind three">Fastest Lap</div>
-                <div class="kind four">Total Race Time</div>
             </div>
     </div>
         <script src="logic.js"></script>

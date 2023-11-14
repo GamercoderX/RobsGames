@@ -57,7 +57,11 @@ openD.addEventListener("click", function() {
   
     console.log("ok to this point")
     // add object to list
-    qatar.push(entry)
+    // ADDED
+    localStorage.setItem(season, JSON.stringify(entry));
+    // qatarIndexes.push(`Season ${season}`)
+    // ADDED
+    // qatar.push(entry)
     // update the display
     var parentElement = document.getElementById('previous-results');
     var divsToRemove = parentElement.querySelectorAll('div:not(:nth-child(-n+4))');
@@ -74,15 +78,28 @@ openD.addEventListener("click", function() {
     console.log("and ok to this point")
     var t = "text"
     const myDiv = document.getElementById('previous-results');
-    for(let i = 0; i<qatar.length; i++){
+    for(let i = 1; i<localStorage.length+1; i++){
+      // var key = qatarIndexes[i];
+      let  bkgCol = null
+      if(i%2===1){
+        bkgCol = "red"
+      } else {
+        bkgCol = "blue"
+      }
+      var value = JSON.parse(localStorage.getItem(i)) 
+
       const one = document.createElement('div');
-      one.textContent = qatar[i].season
+      one.textContent = value.season
+      one.style.backgroundColor = bkgCol
       const two = document.createElement('div');
-      two.textContent = qatar[i].place
+      two.textContent = value.place
+      two.style.backgroundColor = bkgCol
       const three = document.createElement('div');
-      three.textContent = qatar[i].fastestLap
+      three.textContent = value.fastestLap
+      three.style.backgroundColor = bkgCol
       const four = document.createElement('div');
-      four.textContent = qatar[i].totalRaceTime
+      four.textContent = value.totalRaceTime
+      four.style.backgroundColor = bkgCol
 
       myDiv.appendChild(one)
       myDiv.appendChild(two)
@@ -93,7 +110,9 @@ openD.addEventListener("click", function() {
       
     return false
   }
+  let qatarIndexes = []
   let qatar = [];
+  updateDisplay()
 
   // task list:
   // - local Storage, so you don't lose your data
