@@ -19,3 +19,27 @@ input {
     background-color: blue;
     color: white;
 }
+
+.previous-results{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+.kind{
+}
+
+.one{
+    background-color: blue;
+    color: white;
+}
+
+.two{
+    background-color: green;
+}
+.three{
+    background-color: red;
+}
+
+.four{
+    background-color: greenyellow;
+}
